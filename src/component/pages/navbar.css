@@ -1,0 +1,6 @@
+@media (min-width: 62rem){
+
+    .navbar-expand-lg .navbar-collapse{
+        --bs-navbar-nav-link-padding-x: 1.5rem;
+    }
+}

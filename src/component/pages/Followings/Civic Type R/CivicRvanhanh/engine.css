@@ -1,0 +1,33 @@
+.card-enginecivicr{
+    color: red;
+    padding-top: 20px;
+}
+.p-textcivicr{
+    text-align: left;
+    font-size: 8px;
+}
+.box_pro_engine {
+    float: left;
+}
+.engine {
+    width: 88%;
+    padding: 10px 20px;
+
+}
+@media (min-width: 62em){
+    .text-enginecivicr{
+        text-align: left;
+        color: white;
+        margin-left: 44rem;
+        margin-top: 20rem;
+    }
+    .p-textcivicr{
+        
+        font-size: 13px;
+    }
+    .civicr-banner{
+        text-align: left;
+        margin-top: 4.5rem;
+    }
+
+}

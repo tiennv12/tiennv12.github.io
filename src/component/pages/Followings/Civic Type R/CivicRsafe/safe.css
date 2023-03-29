@@ -1,0 +1,19 @@
+
+.box_pro_safe {
+    float: left; 
+}
+
+
+
+@media (min-width: 62em){
+    .card-civicrsafe{
+        text-align: left;
+        
+    }
+    .card-safecivicr{
+        text-align: center;
+       
+        color: gray;
+        
+    }
+}

@@ -1,0 +1,14 @@
+
+.box_pro_safe {
+    float: left; 
+}
+
+
+
+@media (min-width: 62em){
+    .card-civicsafe{
+        text-align: left;
+        margin-left: 40rem;
+        margin-top: 40px;
+    }
+}

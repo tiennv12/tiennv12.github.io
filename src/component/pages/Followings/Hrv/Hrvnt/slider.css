@@ -1,0 +1,17 @@
+.col-5{
+    
+   height: 172px;
+   
+    overflow:scroll;
+ }
+
+
+
+@media (min-width :62rem){
+ .col-5{
+    flex: 0 0 auto;
+    width: 41.66666667%;
+    height: 100%;
+ }
+
+}

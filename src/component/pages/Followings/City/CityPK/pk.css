@@ -1,0 +1,13 @@
+ .card-citypk h3{
+    color: red;
+ } 
+ 
+ @media (min-width: 62em){
+    .card-citypk{
+        margin-top: 17rem;
+        text-align: left;
+        margin-left: 44rem;
+       
+    }
+   
+ }

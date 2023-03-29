@@ -1,0 +1,12 @@
+ .card-civicpk h3{
+    color: red;
+ } 
+ 
+ @media (min-width: 62em){
+    .card-civicpk{
+        margin-top: 50px;
+        text-align: center;
+
+    }
+   
+ }

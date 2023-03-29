@@ -1,0 +1,47 @@
+.civicrnt-p{
+    margin-top: 21rem;
+    text-align: right;
+    font-size: 8px;
+}
+
+
+
+@media (min-width: 62em){
+    
+    .box_content_pro table img {
+        max-width: 70%;
+        max-height: 25%;
+        border-radius: 20px;
+        margin: 10px 20px;
+    }
+    .image {
+        vertical-align: middle;
+    }
+    .box_content_pro_civicr table td {
+        width: 50%;
+       
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 26px;
+        border: transparent;
+    }
+    .cardcivicrnt{
+        text-align: left;
+        margin-top: 12rem;
+    }
+    .cardcivicrnt h2{
+        color: red;
+    }
+    
+    .civicrnt-p{
+        
+        font-size: 14px;
+    }
+    .image_civicr{
+        max-width: 70%;
+        max-height: auto;
+    }
+    }
+    
+    
+    

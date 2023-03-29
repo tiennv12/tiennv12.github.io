@@ -1,0 +1,27 @@
+
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 500px;
+  overflow: auto;
+  text-align: center;
+}
+@media (min-width: 62em){
+.success-1{
+  font-size: 400;
+  font-weight: bold;
+  text-align: left;
+}
+.text-b{
+  text-align: left;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  width: 900px;
+  margin: 10px 180px 100px;
+  height: 500px;
+  overflow: auto;
+  text-align: center;
+}
+}
