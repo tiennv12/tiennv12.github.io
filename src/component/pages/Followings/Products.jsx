@@ -28,9 +28,9 @@ export default function Products() {
     
     const Loading = () =>{
         return (
-            <div>
+            <>
             Loading...
-            </div>
+            </>
         )
     }
     const ShowProducts =() =>{
