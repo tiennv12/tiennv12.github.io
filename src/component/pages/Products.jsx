@@ -10,7 +10,7 @@ export default function Products() {
     useEffect(() => {
         const getProducts = async() =>{
             setLoading(true);
-            const response =await fetch("http://localhost:8000/honda");
+            const response =await fetch("https://ec2-54-179-89-207.ap-southeast-1.compute.amazonaws.com:3000/products");
             if(componentMounted){
                 setData(await response.clone().json());
                 setFilter(await response.json());
