@@ -42,35 +42,35 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                 <li>
-                    <a className="dropdown-item"  href="./following/civicr">
+                    <Link className="dropdown-item"  to="./following/civicr">
                       Honda Civic Type R
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item"  href="./following/accord">
+                    <Link className="dropdown-item"  to="./following/accord">
                       Honda Accrod
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="./following/civic">
+                    <Link className="dropdown-item" to="./following/civic">
                       Honda Civic
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="./following/crv">
+                    <Link className="dropdown-item" to="./following/crv">
                       Honda Crv
-                    </a>
+                    </Link>
                   </li>
                   
                   <li>
-                    <a className="dropdown-item" href="./following/hrv">
+                    <Link className="dropdown-item" to="./following/hrv">
                       Honda Hrv
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="./following/city">
+                    <Link className="dropdown-item" to="./following/city">
                       Honda City
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
