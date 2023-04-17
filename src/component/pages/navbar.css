@@ -1,6 +1,18 @@
-@media (min-width: 62rem){
+@media (min-width: 62rem) {
 
-    .navbar-expand-lg .navbar-collapse{
-        --bs-navbar-nav-link-padding-x: 1.5rem;
+    .navbar-expand-lg .navbar-collapse {
+        --bs-navbar-nav-link-padding-x: 1rem;
+        font-size: 1.4rem;
+        font-weight: 500;
     }
+    .search-bar-container {
+       
+        width: 34%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 200px;
+      }
+
 }

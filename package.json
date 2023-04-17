@@ -4,6 +4,7 @@
   "homepage": "https://tiennv12.github.io",
   "private": true,
   "dependencies": {
+    "@elastic/search-ui": "^1.19.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto": "^4.5.8",
