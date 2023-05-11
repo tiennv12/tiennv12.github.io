@@ -7,70 +7,47 @@ import "./SearchBar.css";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
-  // const url ='http://localhost:9200/products/_search';
-  // const username = 'elastic';
-  // const password = 'Password';
-
   
-  const fetchData = (value) => {
+  const fetchData = (keyword) => {
     var requestOptions = {
-      method: 'GET',
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-      }
+      },
+      body: JSON.stringify(
+        {
+          "query": {
+            "fuzzy": {
+              "title": {
+                "value": keyword
+              }
+            }
+          }
+        }
+      )
     };
-    
+
     return fetch("https://test-es.lthoang.com/products/_search", requestOptions)
       .then((response) => {
-        console.log(response);
-        console.log(response.json());
         return response.json();
       })
-      // .then(result => console.log(result))
-      // .catch(error => console.log('error', error));
-    // fetch('http://localhost:9200/products/_search', {
-    //   method:'GET', 
-    //   mode: 'no-cors',
-    //   headers: new Headers({
-    //     'Content-Type': 'application/json'
-    //   })
-    // }).then(res => {console.log(res.json())})
-    // .then(response => {
-    //   console.log(response);
-    // });
-   
-      
-      // .then((json) => {
-      //   const results = json.filter((products) => {
-      //     return (
-      //       value &&
-      //       products &&
-      //       products.title &&
-      //       products.title.toLowerCase().includes(value)
-      //     );
-      //   });
-      //   setResults(results);
-      // });
+      .then((response) => {
+        console.log(response);
+        if (response) {
+          var data = response["hits"]["hits"];
+          return data;
+        }
+        return [];
+      })
+      .then((data) => {
+        setResults(data);
+      });
  };
 
   const handleChange = (value) => {
     setInput(value);
     fetchData(value);
-    // const client = new elasticsearch.Client({
-    //   host: 'http://localhost:9200',
-    //   });
-    //    client.search({
-    //     index: 'products/_search',
-    //     Authorization :{
-    //       username : 'elastic',
-    //       password :'Password'
-    //     } ,
-    //     query: {
-    //       match: { quote: value }
-    //     }
-    //   }).then(response => response.json())
-    //    
   };
 
   return (
