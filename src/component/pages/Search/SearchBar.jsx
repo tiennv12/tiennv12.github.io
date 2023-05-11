@@ -15,15 +15,17 @@ export const SearchBar = ({ setResults }) => {
   const fetchData = (value) => {
     var requestOptions = {
       method: 'GET',
-      mode: 'no-cors'
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
     };
     
-    return fetch("http://localhost:9200/products/_search/", requestOptions)
-      .then(response => {
+    return fetch("https://test-es.lthoang.com/products/_search", requestOptions)
+      .then((response) => {
         console.log(response);
-        const temp = response.text();
-        console.log(temp);
-        return temp;
+        console.log(response.json());
+        return response.json();
       })
       // .then(result => console.log(result))
       // .catch(error => console.log('error', error));
