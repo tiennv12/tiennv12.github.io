@@ -7,48 +7,56 @@ import "./SearchBar.css";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
+  // const url ='http://localhost:9200/products/_search';
+  // const username = 'elastic';
+  // const password = 'Password';
+
   
-  const fetchData = (keyword) => {
+  const fetchData = (value) => {
     var requestOptions = {
-      method: 'POST',
+      method: 'GET',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(
-        {
-          "query": {
-            "fuzzy": {
-              "title": {
-                "value": keyword
-              }
-            }
-          }
-        }
-      )
+      }
     };
-
+    
     return fetch("https://test-es.lthoang.com/products/_search", requestOptions)
       .then((response) => {
+        console.log(response);
+        console.log(response.json());
         return response.json();
       })
-      .then((response) => {
-        console.log(response);
-        if (response) {
-          var data = response["hits"]["hits"];
-          return data;
-        }
-        return [];
-      })
-      .then((data) => {
-        setResults(data);
-      });
+      // .then(result => console.log(result))
+      // .catch(error => console.log('error', error));
+    // fetch('http://localhost:9200/products/_search', {
+    //   method:'GET', 
+    //   mode: 'no-cors',
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(res => {console.log(res.json())})
+    // .then(response => {
+    //   console.log(response);
+    // });
+   
+      
+      // .then((json) => {
+      //   const results = json.filter((products) => {
+      //     return (
+      //       value &&
+      //       products &&
+      //       products.title &&
+      //       products.title.toLowerCase().includes(value)
+      //     );
+      //   });
+      //   setResults(results);
+      // });
  };
 
-  const handleChange = async (value) => {
+  const handleChange = (value) => {
     setInput(value);
-<<<<<<< HEAD
-    await fetchData(value);
+    fetchData(value);
     // const client = new elasticsearch.Client({
     //   host: 'http://localhost:9200',
     //   });
@@ -63,9 +71,6 @@ export const SearchBar = ({ setResults }) => {
     //     }
     //   }).then(response => response.json())
     //    
-=======
-    fetchData(value);
->>>>>>> 4ede402e20fdbf38ae75194d3e2c299fb005d0fa
   };
 
   return (
