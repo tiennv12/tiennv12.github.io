@@ -7,53 +7,47 @@ import "./SearchBar.css";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
-  // const url ='http://localhost:9200/products/_search';
-  // const username = 'elastic';
-  // const password = 'Password';
-
   
-  const fetchData = (value) => {
+  const fetchData = (keyword) => {
     var requestOptions = {
-      method: 'GET',
-      mode: 'no-cors'
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(
+        {
+          "query": {
+            "fuzzy": {
+              "title": {
+                "value": keyword
+              }
+            }
+          }
+        }
+      )
     };
-    
-    return fetch("http://localhost:9200/products/_search/", requestOptions)
-      .then(response => {
-        console.log(response);
-        const temp = response.text();
-        console.log(temp);
-        return temp;
+
+    return fetch("https://test-es.lthoang.com/products/_search", requestOptions)
+      .then((response) => {
+        return response.json();
       })
-      // .then(result => console.log(result))
-      // .catch(error => console.log('error', error));
-    // fetch('http://localhost:9200/products/_search', {
-    //   method:'GET', 
-    //   mode: 'no-cors',
-    //   headers: new Headers({
-    //     'Content-Type': 'application/json'
-    //   })
-    // }).then(res => {console.log(res.json())})
-    // .then(response => {
-    //   console.log(response);
-    // });
-   
-      
-      // .then((json) => {
-      //   const results = json.filter((products) => {
-      //     return (
-      //       value &&
-      //       products &&
-      //       products.title &&
-      //       products.title.toLowerCase().includes(value)
-      //     );
-      //   });
-      //   setResults(results);
-      // });
+      .then((response) => {
+        console.log(response);
+        if (response) {
+          var data = response["hits"]["hits"];
+          return data;
+        }
+        return [];
+      })
+      .then((data) => {
+        setResults(data);
+      });
  };
 
   const handleChange = async (value) => {
     setInput(value);
+<<<<<<< HEAD
     await fetchData(value);
     // const client = new elasticsearch.Client({
     //   host: 'http://localhost:9200',
@@ -69,6 +63,9 @@ export const SearchBar = ({ setResults }) => {
     //     }
     //   }).then(response => response.json())
     //    
+=======
+    fetchData(value);
+>>>>>>> 4ede402e20fdbf38ae75194d3e2c299fb005d0fa
   };
 
   return (
