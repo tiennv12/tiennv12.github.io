@@ -52,9 +52,9 @@ export const SearchBar = ({ setResults }) => {
       // });
  };
 
-  const handleChange = (value) => {
+  const handleChange = async (value) => {
     setInput(value);
-    fetchData(value);
+    await fetchData(value);
     // const client = new elasticsearch.Client({
     //   host: 'http://localhost:9200',
     //   });

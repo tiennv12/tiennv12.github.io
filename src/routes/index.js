@@ -1,11 +1,15 @@
 import Home from '../component/pages/Home/Home';
-import Following from '../component/pages/Followings';
+import Following from '../component/pages/Followings/Following';
 import Accord from '../component/pages/Followings/Accord/Accord'
 import Crv from '../component/pages/Followings/Crv/Crv';
 import City from '../component/pages/Followings/City/City';
 import Hrv from '../component/pages/Followings/Hrv/Hrv';
 import Civic from '../component/pages/Followings/Civic/Civic';
 import CivicR from '../component/pages/Followings/Civic Type R/CivicR';
+import admin from '../component/pages/login/admin';
+
+
+
 
 
 
@@ -20,6 +24,12 @@ const publicRoutes =[
     {path: '/following/hrv', component: Hrv},
     {path: '/following/civic', component: Civic},
     {path: '/following/civic', component: CivicR},
+    {path: '/*', component: admin},
+
+
+
+    
+
 
     
 
