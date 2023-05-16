@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Products() {
 
@@ -10,13 +11,13 @@ export default function Products() {
     useEffect(() => {
         const getProducts = async() =>{
             setLoading(true);
-            // const response =await fetch("https://test-api.lthoang.com/products");
-            // if(componentMounted){
-            //     setData(await response.clone().json());
-            //     setFilter(await response.json());
-            //     setLoading(false);
-            //     console.log(filter)
-            // }
+            const response =await fetch("https://test-api.lthoang.com/products");
+            if(componentMounted){
+                setData(await response.clone().json());
+                setFilter(await response.json());
+                setLoading(false);
+                console.log(filter)
+            }
             return () =>{
                 componentMounted =false;
             }
@@ -41,13 +42,13 @@ export default function Products() {
                     <>
                     <div className="col-md-3 ">
                     <div class="card">
-                    <a href={product.test}>
+                    <Link to={product.to}>
                         <img src={product.image} class="card-img-top h-200 w-200" alt={product.title} />
-                        </a>
+                        </Link>
                         <div class="card-body">
                             <h5 class="card-title">{product.title}</h5>
                             <p class="card-text">{product.price}</p>
-                            <a href={product.test} class="btn btn-primary">Chi tiết</a>
+                            <Link to={product.to} class="btn btn-primary">Chi tiết</Link>
                         </div>
                     </div>
                     </div>
