@@ -6,8 +6,8 @@ import City from '../component/pages/Followings/City/City';
 import Hrv from '../component/pages/Followings/Hrv/Hrv';
 import Civic from '../component/pages/Followings/Civic/Civic';
 import CivicR from '../component/pages/Followings/Civic Type R/CivicR';
-import admin from '../component/pages/login/admin';
-
+// import admin from '../component/pages/login/admin';
+import Ad from '../component/pages/admin/ad';
 
 
 
@@ -24,7 +24,8 @@ const publicRoutes =[
     {path: '/following/hrv', component: Hrv},
     {path: '/following/civic', component: Civic},
     {path: '/following/civic', component: CivicR},
-    {path: '/*', component: admin},
+    // {path: '/*', component: admin},
+    {path: '/*', component: Ad},
 
 
 

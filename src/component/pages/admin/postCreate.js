@@ -3,7 +3,7 @@ import { Create, SimpleForm, TextInput, DateInput, required } from 'react-admin'
 
 
 
-export const NewsCreate = (props) => (
+export const PostCreate = (props) => (
     <Create  {...props}  >
         <SimpleForm >
             <TextInput source="title" validate={[required()]} fullWidth />
