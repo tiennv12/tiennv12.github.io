@@ -27,6 +27,7 @@
     "elasticsearch-browser": "^16.7.1",
     "font-awesome": "^4.7.0",
     "force": "^0.0.3",
+    "gh-pages-deploy": "^0.5.1",
     "mdb-react-ui-kit": "^5.0.0",
     "ra-data-simple-rest": "^4.10.3",
     "ra-language-vietnamese": "^3.0.1",
