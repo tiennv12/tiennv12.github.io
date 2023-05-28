@@ -109,7 +109,25 @@ const dataProvider = (apiUrl, headers = () => {}, idParamApi = '_id', idParamAdm
 
     const fn = async (type, resource, { pagination, sort, filter = {}, data, ids, id, target }) => {
         let total = null;
+        console.log(filter);
+        // if ('title' in filter){
+        //     let q= filter['title'];
+        //     filter['title']={
+        //         'like': '%' + q + '%'
+        //     }
+        // }
 
+        for (const property in filter) {
+            let value = filter[property];
+            if ('like' in value) {
+                let q = value['like'];
+                if (!(q.length > 2 && q[0] === '%' && q[q.length - 1] === '%')) {
+                    value['like'] = '%' + q + '%';
+                }
+            }
+            // console.log(`${property}: ${object[property]}`);
+        }
+        console.log(filter);
         if ([GET_LIST, GET_MANY_REFERENCE].indexOf(type) > -1) {
             const totalFilter = JSON.parse(JSON.stringify(filter));
             if (id) totalFilter[target || idParamApi] = id;

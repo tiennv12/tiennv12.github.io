@@ -6,14 +6,21 @@ import { i18nProvider } from './i18nProvider';
 import UseToken from './Token';
 import { authProvider } from './authProvider';
 import Login from '../login/login';
-import { PostList } from './postList';
+
 import PostEdit from './postEdit';
 import { PostCreate } from './postCreate';
+import PostList from './postList';
+
+
+
+
+
 
 export const httpClient = () => {
     const { token } = JSON.parse(localStorage.getItem('auth')) || {};
     return { Authorization: `Bearer ${token}` };
 };
+
 
 function Ad() {
     const { token, setToken } = UseToken();
@@ -24,7 +31,7 @@ function Ad() {
 
     return (
         <Admin
-            dataProvider={dataProvider('http://localhost:8000/',httpClient)}
+            dataProvider={dataProvider('test-api.lthoang.com',httpClient)}
             i18nProvider={i18nProvider}
             dashBoard={Dashboard}
             authProvider={authProvider}

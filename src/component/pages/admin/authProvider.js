@@ -1,10 +1,13 @@
-
+// export const httpClient = () => {
+//     const { token } = JSON.parse(localStorage.getItem('auth')) || {};
+//     return { Authorization: `Bearer ${token}` };
+// };
 
 export const authProvider = {
     // authentication
     login: ({ username, password }) => {
         const request = new Request(
-        'http://localhost:8000/users/login',
+        'https://test-api.lthoang.com/users/login',
          {
             method: 'POST',
             body: JSON.stringify({ email: username, password }),
