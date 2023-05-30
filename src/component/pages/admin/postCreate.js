@@ -7,8 +7,10 @@ export const PostCreate = (props) => (
     <Create  {...props}  >
         <SimpleForm >
             <TextInput source="title" validate={[required()]} fullWidth />
-            <TextInput source="body" />
-            <DateInput label="Publication date" source="date_created" defaultValue={new Date()} />
+            <TextInput source="price" />
+            <TextInput source="description" />
+            <TextInput source="image" />
+            <TextInput source="to" />
         </SimpleForm>
     </Create>
 );

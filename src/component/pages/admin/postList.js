@@ -106,14 +106,16 @@ const PostList = (props) => {
             {...props}
             bulkActionButtons={<PostListBulkActions />}
             filters={<PostFilter/>}
-            sort={{ field: 'date_created', order: 'DESC' }}
+            
             exporter={exporter}
         >
             <Datagrid rowClick={rowClick} expand={PostPanel} optimized>
                 <TextField source="id" />
                 <TextField source="title" cellClassName={classes.title} />
-                <DateField source="date_created" sortByOrder="DESC" cellClassName={classes.publishedAt} />
-                <TextField source="body" />
+                <TextField source="price" />
+                <TextField source="description" />
+                <TextField source="image" />
+                <TextField source="to" />
 
                 <PostListActionToolbar>
                     <EditButton />

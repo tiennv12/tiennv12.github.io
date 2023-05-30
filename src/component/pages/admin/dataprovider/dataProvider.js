@@ -109,7 +109,7 @@ const dataProvider = (apiUrl, headers = () => {}, idParamApi = '_id', idParamAdm
 
     const fn = async (type, resource, { pagination, sort, filter = {}, data, ids, id, target }) => {
         let total = null;
-        console.log(filter);
+        // console.log(filter);
         // if ('title' in filter){
         //     let q= filter['title'];
         //     filter['title']={
@@ -127,7 +127,7 @@ const dataProvider = (apiUrl, headers = () => {}, idParamApi = '_id', idParamAdm
             }
             // console.log(`${property}: ${object[property]}`);
         }
-        console.log(filter);
+        // console.log(filter);
         if ([GET_LIST, GET_MANY_REFERENCE].indexOf(type) > -1) {
             const totalFilter = JSON.parse(JSON.stringify(filter));
             if (id) totalFilter[target || idParamApi] = id;
