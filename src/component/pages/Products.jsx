@@ -11,7 +11,7 @@ export default function Products() {
     useEffect(() => {
         const getProducts = async() =>{
             setLoading(true);
-            const response =await fetch("https://test-api.lthoang.com/");
+            const response =await fetch("https://test-api.lthoang.com/hondas");
             if(componentMounted){
                 setData(await response.clone().json());
                 setFilter(await response.json());
