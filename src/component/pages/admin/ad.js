@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Dashboard from './Dashboard';
 import { Admin, Resource } from 'react-admin';
-import dataProvider from './dataprovider/dataProvider';
+import {dataProvider} from './dataprovider/dataProvider';
 import { i18nProvider } from './i18nProvider';
 import UseToken from './Token';
 import { authProvider } from './authProvider';
