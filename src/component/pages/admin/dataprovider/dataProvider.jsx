@@ -204,3 +204,4 @@ const dataProvider = (apiUrl, headers = () => {}, idParamApi = '_id', idParamAdm
 
 var _default = dataProvider;
 exports.default = _default;
+export default dataProvider();
