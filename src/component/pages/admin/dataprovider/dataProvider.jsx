@@ -1,7 +1,7 @@
-Object.defineProperty(exports, '__esModule', {
-    value: true,
-});
-
+// Object.defineProperty(exports, '__esModule', {
+//     value: true,
+// });
+// exports.default = void 0;
 
 var _lodash = _interopRequireDefault(require('lodash'));
 
@@ -202,6 +202,8 @@ const dataProvider = (apiUrl, headers = () => {}, idParamApi = '_id', idParamAdm
     return fn;
 };
 
-var _default = dataProvider;
-exports.default = _default;
-export default dataProvider();
+// var _default = dataProvider;
+// exports.default = _default;
+export default dataProvider;
+
+

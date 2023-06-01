@@ -14,7 +14,7 @@ export const SearchBar = ({ setResults }) => {
   
   const fetchData = (value) => {
     var requestOptions = {
-      method: 'GET',
+      method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
