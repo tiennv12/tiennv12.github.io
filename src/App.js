@@ -1,5 +1,5 @@
 import './App.css';
-import {HashLink as Router, Routes, Route} from 'react-router-hash-link';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {publicRoutes} from './routes';
 
 
