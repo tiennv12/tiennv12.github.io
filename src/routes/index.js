@@ -19,7 +19,7 @@ const publicRoutes = [
     { path: '/following/civic', component: Civic },
     { path: '/following/civic', component: CivicR },
     // {path: '/*', component: admin},
-    { path: '/ad', component: Ad }
+    { path: '/*', component: Ad }
 ];
 
 const privateRoutes = [];
