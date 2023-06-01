@@ -5,7 +5,7 @@ import  dataProvider  from './dataprovider/dataProvider';
 import { i18nProvider } from './i18nProvider';
 import UseToken from './Token';
 import { authProvider } from './authProvider';
-import Login from '../login/login';
+// import Login from '../login/login';
 
 import PostEdit from './postEdit';
 import { PostCreate } from './postCreate';
@@ -17,11 +17,11 @@ export const httpClient = () => {
 };
 
 function Ad() {
-    const { token, setToken } = UseToken();
+    // const { token, setToken } = UseToken();
 
-    if (!token) {
-        return <Login setToken={setToken} />;
-    }
+    // if (!token) {
+    //     return <Login setToken={setToken} />;
+    // }
 
     return (
         <Admin
